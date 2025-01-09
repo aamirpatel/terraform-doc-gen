@@ -5,6 +5,12 @@ terraform {
       version = "~> 4.0"
     }
   }
+backend "s3" {
+    bucket                 = "myaptestbucketstate"
+    key                    = "state/terraform.tfstate"
+    region                 = "us-east-1"
+    dynamodb_table = "mystate"
+  }
 }
 
 provider "aws" {
