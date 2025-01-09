@@ -12,7 +12,7 @@ backend "s3" {
     dynamodb_table = "mystate"
   }
 }
-
+#vpc
 provider "aws" {
   region = "us-east-1"
 }
